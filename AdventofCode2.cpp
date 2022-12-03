@@ -33,20 +33,12 @@ void beolvasas()
 int ellensegcsuzli(string apadfasza)
 {
 	if (apadfasza == "A")
-	{
 		return 1;
-	}
 	else
-	{
 		if (apadfasza == "B")
-		{
 			return 2;
-		}
 		else
-		{
-			return 3;
-		}
-	}
+		return 3;
 }
 int sajatcsuzli(string apadfasza)
 {
