@@ -9,15 +9,15 @@ void cserebere(int mennyi, int honnan, int hova)
 {
 	string temp;
 	string temp2;
-	int x, y = 0;
+	int x = 0;
 	temp = data[honnan];
 	temp2 = data[hova];						//dark lasagne, mert ez retegelt :)
-	x = data[honnan].size();x--;			//esku szar de mukszik :)
-	y = (x - mennyi)+1;
-	for (int i = x; i >= y; i--)
+	x = data[honnan].size()-1;			//esku szar de mukszik :)
+	for (int i = x; i >= x - mennyi+1; i--)
 		{temp2 += temp[i];}
-	data[hova] = temp2;		temp2 ="";
-	for (int i = 0; i < y; i++)
+	data[hova] = temp2;
+	temp2 ="\0";
+	for (int i = 0; i < x - mennyi+1; i++)
 		{temp2 += temp[i];}
 	data[honnan] = temp2;
 }
